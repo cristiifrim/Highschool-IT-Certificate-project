@@ -1,0 +1,5 @@
+Icons: Font Awesome - https://fontawesome.com/license/free - sau in folderul licenses
+Google Fonts: 
+	Poppins: https://fonts.google.com/specimen/Poppins?query=poppi#about - sau in folderul licenses
+	JetBrains: https://fonts.google.com/specimen/JetBrains+Mono?query=jetbrains#license - sau in folderul licenses
+Imagine background - Pexels: https://www.pexels.com/license/ - sau in folderul licenses

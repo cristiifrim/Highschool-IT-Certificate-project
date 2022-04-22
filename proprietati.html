@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+
+    <title>Programarea orientată pe obiecte</title>
+
+    <style>
+      .info {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .info p {
+        margin-left: 60px;
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+    </style>
+
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <h4>Programarea orientată pe obiecte</h4>
+    </div>
+
+    <ul class = "nav-links">
+      <li><a href = "index.html" class = "nav-hover">Home</a></li>
+      <li><a href = "proprietati.html" class = "nav-hover">Proprietăți</a></li>
+      <li><a href = "aplicatii.html" class = "nav-hover">Aplicații</a></li>
+      <li><a href = "info.html" class = "nav-hover">Info</a></li>
+    </ul>
+
+    <div class="burger">
+      <div class = "line"></div>
+      <div class = "line"></div>
+      <div class = "line"></div>
+    </div>
+
+  </nav>
+
+  <script src="js/nav.js"></script>
+  <!-------------------->
+
+  <!-- Principii -->
+  <div class = "main-wrapper">
+
+    <div class = "info">
+
+      <div class="property">
+        <h3 class = "r-title">
+          Abstractizarea
+        </h3>
+        <center><i class="fa fa-cubes" style="font-size:100px;"></i></center>
+      </div>
+
+      <p class="at-text">
+        Este posibilitatea ca un program să separe unele aspecte ale informației pe care o manipulează, adică posibilitatea de a se concentra asupra esențialului. Fiecare obiect în sistem are rolul unui “actor” abstract, care poate executa acțiuni, își poate modifica și comunica starea și poate comunica cu alte obiecte din sistem fără a dezvălui cum au fost implementate acele facilitați. Procesele, funcțiile sau metodele pot fi de asemenea abstracte, și în acest caz sunt necesare o varietate de tehnici pentru a extinde abstractizarea.
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <div class="property">
+        <h3 class="r-title">
+          Încapsularea
+        </h3>
+        <center><i class="fa fa-briefcase" style="font-size:100px;"></i></center>
+      </div>
+      
+      <p class="at-text">
+        Este numită și ascunderea de informații: Asigură faptul că obiectele nu pot schimba starea internă a altor obiecte în mod direct (ci doar prin metode puse la dispoziție de obiectul respectiv); doar metodele proprii ale obiectului pot accesa starea acestuia. Fiecare tip de obiect expune o interfață pentru celelalte obiecte care specifică modul cum acele obiecte pot interacționa cu el.
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <div class="property">
+        <h3 class="r-title">
+          Polimorfismul
+        </h3>
+        <center><i class="fa fa-sitemap" style="font-size:100px;"></i></center>
+      </div>
+      
+      <p class="at-text">
+        Este abilitatea de a procesa obiectele în mod diferit, în funcție de tipul sau de clasa lor. Mai exact, este abilitatea de a redefini metode pentru clasele derivate. De exemplu pentru o clasă Figura putem defini o metodă arie. Dacă Cerc, Dreptunghi, etc. vor extinde clasa Figura, acestea pot redefini metoda arie.
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <div class="property">
+        <h3 class="r-title">
+          Moștenirea
+        </h3>
+        <center><i class="fa fa-users" style="font-size:100px;"></i></center>
+      </div>
+      
+      <p class="at-text">
+        Organizează și facilitează polimorfismul și încapsularea, permițând definirea și crearea unor clase specializate plecând de la clase deja definite - acestea pot împărtăși comportamentul lor, fără a fi nevoie de a-l redefini. Aceasta se face de obicei prin gruparea obiectelor în clase și prin definirea de clase ca extinderi ale unor clase existente. Conceptul de moștenire permite construirea unor clase noi, care păstrează caracteristicile și comportarea, deci datele și funcțiile membru, de la una sau mai multe clase definite anterior, fiind posibilă redefinirea sau adăugarea unor date și funcții noi. Se utilizează ideea: ”Anumite obiecte sunt similare, dar în același timp diferite”.  Esența moștenirii constă în posibilitatea refolosirii lucrurilor care funcționează.
+      </p>
+
+    </div>
+  </div>
+
+
+  <script src="js/prop.js"></script>
+
+  <!----------------->
+
+  <!-- FOOTER -->
+  <div class = "footer">
+    <p id = "jsWrite">&copy; Copyright {{currentYear}} - Ifrim Cristian. All rights reserved.</p>
+  </div>
+
+  <script src="js/footer.js"></script>
+
+</body>
+
+
+</html>

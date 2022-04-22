@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+
+    <title>Programarea orientată pe obiecte</title>
+
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="logo">
+      <h4>Programarea orientată pe obiecte</h4>
+    </div>
+
+    <ul class = "nav-links">
+      <li><a href = "index.html" class = "nav-hover">Home</a></li>
+      <li><a href = "proprietati.html" class = "nav-hover">Proprietăți</a></li>
+      <li><a href = "aplicatii.html" class = "nav-hover">Aplicații</a></li>
+      <li><a href = "info.html" class = "nav-hover">Info</a></li>
+    </ul>
+
+    <div class="burger">
+      <div class = "line"></div>
+      <div class = "line"></div>
+      <div class = "line"></div>
+    </div>
+
+  </nav>
+
+  <script src="js/nav.js"></script>
+  <!-------------------->
+
+  <!-- Aplicatii -->
+
+  <div class="main-wrapper">
+
+    <div class="info">
+      <h3 class="r-title">
+        Aplicația #1 - Crearea unei clase
+      </h3>
+
+      <p class = 'at-text'>
+        În limbajul C++, clasele se pot creea cu tipul de date class. Intr-o clasă se pot defini două lucruri, variabilele utilizate ce sunt private si funcțiile specifice clasei, care doar ele pot accesa variabilele declarate anterior.
+        Implementarea unei clase se poate face într-un fișier de tip 'header'(acesta se va include cu instrucțiunea '#include "nume_header.h"') sau direct în program. Pentru a vedea cum se creează o clasa în C++, click pe '<a href = "#" class="js-alert">vezi sursa</a>'.
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <h3 class="r-title">
+        Aplicatia #2 - Cont bancar
+      </h3>
+
+      <p class="at-text">
+        Această aplicație se poate realiza foarte ușor prin programarea orientată pe obiecte. Astfel, putem creea o clasă Persoana în care să deținem informații despre aceasta cum ar fi:
+        Nume, vârsta, IBAN, suma deținută și dobanda. Totodată, putem declara metodele specifice unui ATM: vizualizare sold, extragere numerar si depunere numerar.
+        Pentru a vedea codul sursă a acestei aplicații, click pe '<a href = "#" class="js-alert">vezi sursa</a>'. 
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <h3 class="r-title">
+        Aplicatia #3 - Parcare
+      </h3>
+
+      <p class="at-text">
+        O utilitate practică este de a avea un soft ce monitorizează numărul de mașini în parcare, datele despre mașină și timpul de staționare al acestora.
+        Un astfel de soft se poate creea foarte simplu printr-o clasă C++ care reține informațiile de mai sus și are urmatoarele metode: Inserare masina, calculare cost, eliminare masina.
+        Pentru a vedea codul sursă a acestei aplicații, click pe '<a href = "#" class="js-alert">vezi sursa</a>'. 
+      </p>
+
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <h3 class='r-title'>
+        Aplicatia #4 - Numere complexe cu supraîncarcare de operatori
+      </h3>
+
+      <p class="at-text">
+        O utilizare matematica a programarii orientate pe obiecte este lucrul cu numere complexe. Astfel, se poate realiza supraîncarcarea operatorilor pentru a crea expesii de genul z1 * z2;
+        Un astfel de număr se poate creea cu o clasa C++ cu 2 variabile, partea reală și cea imaginară, iar metodele sunt modulul unui numar real și de supraincarcare a operatorilor de adunare, scădere, înmulțire.
+        Pentru a vedea codul sursă a acestei aplicații, click pe '<a href = "#" class="js-alert">vezi sursa</a>'. 
+      </p>
+      
+    </div>
+    <br>
+    <br>
+    <div class="info">
+      <h3 class="r-title">
+        General
+      </h3>
+      <p class="at-text">
+        Programarea orientată pe obiecte are peste un milion de aplicații în lumea reală. Exemplele anterioare sunt câteva exerciții pentru o bună înțelegere a conceptului de obiect.
+        Prin folosirea datelor private, folosim Încapsularea. Când creăm un obiect, folosim Abstractizarea deoarece obiectul este abstract de celelalte. Prin definirea mai multor obiecte folosim Polimorfismul.
+        Când se crează o clasă nouă prin care îi oferim atribute și metode dintr-o clasă părinte, folosim Moștenirea. Clasa nouă se numește și clasă derivată. 
+      </p>
+    </div>
+
+  </div>
+  <div class="alert-wrapper">
+    <div class = "alert">
+      <div class = "alert-div" style="overflow:auto;width:800px;height:600px;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+      <span style="color: #cd2828; font-weight: bold">#include &lt;iostream&gt;</span>
+      <span style="color: #cd2828; font-weight: bold">#include &lt;cstring&gt;</span>
+
+      <span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span>
+      
+      <span style="color: #999999; font-style: italic">/*</span>
+      <span style="color: #999999; font-style: italic">    *Urmeaza definitia unei clase in C++</span>
+      <span style="color: #999999; font-style: italic">    *Aceasta se face folosind cuvantul class</span>
+      <span style="color: #999999; font-style: italic">    *Se vor defini datele private si cele publice</span>
+      
+      <span style="color: #999999; font-style: italic">*/</span>
+      
+      <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Salut</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">//Definirea clasei</span>
+      
+          
+          <span style="color: #999999; font-style: italic">/*</span>
+      <span style="color: #999999; font-style: italic">        *Acestea sunt datele private</span>
+      <span style="color: #999999; font-style: italic">    */</span>
+          <span style="color: #d0d0d0">private:</span> 
+              <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">varsta;</span>
+              <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">nume[</span><span style="color: #3677a9">101</span><span style="color: #d0d0d0">];</span>
+              <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">functie[</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">];</span>
+      
+          <span style="color: #d0d0d0">public:</span> <span style="color: #999999; font-style: italic">//Datele publice ale clasei</span>
+          
+          <span style="color: #999999; font-style: italic">/*</span>
+      <span style="color: #999999; font-style: italic">        *Pentru a creea o un obiect, avem nevoie de o functie constructoare</span>
+      <span style="color: #999999; font-style: italic">        *Aceasta se apeleaza de fiecare data cand un obiecte este creat.</span>
+      <span style="color: #999999; font-style: italic">        *Cu aceasta functie setam valori implicite la variabilele clasei.</span>
+      <span style="color: #999999; font-style: italic">    */</span>
+      
+              <span style="color: #d0d0d0">Salut(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">y[</span><span style="color: #3677a9">101</span><span style="color: #d0d0d0">],</span> <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">z[</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">])</span> <span style="color: #d0d0d0">{</span>
+                  <span style="color: #d0d0d0">varsta</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">x;</span>
+                  <span style="color: #d0d0d0">strcpy(nume,</span> <span style="color: #d0d0d0">y);</span>
+                  <span style="color: #d0d0d0">strcpy(functie,</span> <span style="color: #d0d0d0">z);</span>
+              <span style="color: #d0d0d0">}</span>
+              <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">getAge()</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">// Aceasta functie ne ofera varsta persoanei cui ii spunem salut.</span>
+                  <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">varsta;</span>
+              <span style="color: #d0d0d0">}</span>
+              <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Hello()</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">// Aceasta functie saluta omul pe baza varstei si functiei acestuia.</span>
+                  <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(varsta</span> <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">30</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+                      <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Buna ziua, domnule &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">functie</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39; &#39;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">nume</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;.&#39;</span><span style="color: #d0d0d0">;</span>
+                  <span style="color: #d0d0d0">}</span>
+                  <span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #d0d0d0">{</span>
+                      <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(strcmp(functie,</span> <span style="color: #ed9d13">&quot;primar&quot;</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">!=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+                          <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Salut, &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">nume</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;.&#39;</span><span style="color: #d0d0d0">;</span>
+                      <span style="color: #6ab825; font-weight: bold">else</span>
+                          <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Buna ziua tinere primar, &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">nume</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;.&#39;</span><span style="color: #d0d0d0">;</span>
+                  <span style="color: #d0d0d0">}</span>
+              <span style="color: #d0d0d0">}</span>
+      
+      <span style="color: #d0d0d0">};</span>
+      
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span>
+      <span style="color: #d0d0d0">{</span>
+          <span style="color: #999999; font-style: italic">/*</span>
+      <span style="color: #999999; font-style: italic">        *Urmeaza declararea unui obiect.</span>
+      <span style="color: #999999; font-style: italic">        *Acesta se va declara cu numarul de argumente ale functiei Constructoare</span>
+      <span style="color: #999999; font-style: italic">    */</span>
+          
+          <span style="color: #d0d0d0">Salut</span> <span style="color: #d0d0d0">sal(</span><span style="color: #3677a9">25</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Ifrim Cristian&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;director&quot;</span><span style="color: #d0d0d0">);</span> <span style="color: #999999; font-style: italic">//Crearea unui obiect nou</span>
+          <span style="color: #d0d0d0">sal.Hello();</span> <span style="color: #999999; font-style: italic">//Aceasta functie apeleaza functia Hello din interiorul clasei.</span>
+      
+          <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">sal.getAge();</span> <span style="color: #999999; font-style: italic">// Aici afisam varsta obiectului nostru.</span>
+      
+          <span style="color: #999999; font-style: italic">/*</span>
+      <span style="color: #999999; font-style: italic">    Diferenta dintre declaratia noastra sal si clasa Salut este urmatoarea:</span>
+      <span style="color: #999999; font-style: italic">    Salut este clasa generala, fiind scrisa dupa cerintele noastre,</span>
+      <span style="color: #999999; font-style: italic">    iar sal este un obiect cu atribute specifice.</span>
+      <span style="color: #999999; font-style: italic">    </span>
+      <span style="color: #999999; font-style: italic">    Clasa este conceptul general, obiectele sunt membri ai claselor.</span>
+      
+      <span style="color: #999999; font-style: italic">    */</span>
+          
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+      </pre></div>
+
+    </div> 
+    <button onclick="alertClose()">Inchide</button> 
+  </div> 
+  <div class="alert-wrapper">
+    <div class="alert">
+      <div class = "alert-div" style="overflow:auto;width:800px;height:600px;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+      <span style="color: #cd2828; font-weight: bold">#include &lt;iostream&gt;</span>
+      <span style="color: #cd2828; font-weight: bold">#include &lt;cmath&gt;</span>
+      <span style="color: #cd2828; font-weight: bold">#include &lt;string&gt;</span>
+
+      <span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span>
+
+      <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Cont</span> <span style="color: #d0d0d0">{</span>
+
+        <span style="color: #d0d0d0">private:</span>
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">suma;</span>
+            <span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">dobanda;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">nume;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">IBAN;</span>
+        <span style="color: #d0d0d0">public:</span>
+            <span style="color: #d0d0d0">Cont(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">s,</span> <span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">n,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">iban);</span>
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">showSum</span><span style="color: #d0d0d0">();</span>
+            <span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #447fcf">calculateInterest</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">years);</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">showName</span><span style="color: #d0d0d0">();</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">showIBAN</span><span style="color: #d0d0d0">();</span>
+            <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">addSum</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x);</span>
+            <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">withdrawSum</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x);</span>
+      <span style="color: #d0d0d0">};</span>
+
+      <span style="color: #d0d0d0">Cont::Cont(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">s,</span> <span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">n,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">iban)</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">s;</span>
+        <span style="color: #d0d0d0">dobanda</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">i;</span>
+        <span style="color: #d0d0d0">nume</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">n;</span>
+        <span style="color: #d0d0d0">IBAN</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">iban;</span>
+        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Utilizator creat:\nNume &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39; &#39;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;IBAN: &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">iban</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Suma: &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Dobanda: &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">Cont::showSum()</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">suma;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">Cont::calculateInterest(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">years)</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">dobanda*suma*years</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">100</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Cont::showName()</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">nume;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Cont::showIBAN()</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">IBAN;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Cont::addSum(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x)</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(x</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Nu puteti adauga o suma nula de bani.&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+        <span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">+=</span> <span style="color: #d0d0d0">x;</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Ati adaugat cu succes suma de &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">x</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;. Sold total: &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;.&#39;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Cont::withdrawSum(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x)</span> <span style="color: #d0d0d0">{</span>
+        <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(x</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">suma)</span>
+            <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">-=</span> <span style="color: #d0d0d0">x,</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Ati retras cu succes suma de &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">x</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;. Sold total: &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">suma</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;.&#39;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #6ab825; font-weight: bold">else</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Suma invalida sau nula. Va rugam reincercati.&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">main()</span>
+      <span style="color: #d0d0d0">{</span>
+        <span style="color: #d0d0d0">Cont</span> <span style="color: #d0d0d0">user(</span><span style="color: #3677a9">5000</span><span style="color: #d0d0d0">,</span> <span style="color: #3677a9">3.5</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Ifrim Cristian&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;RO55RNCB0001&quot;</span><span style="color: #d0d0d0">);</span>
+        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">user.calculateInterest(</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">user.addSum(</span><span style="color: #3677a9">2700</span><span style="color: #d0d0d0">);</span>
+        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">user.showSum()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">user.calculateInterest(</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">user.withdrawSum(</span><span style="color: #3677a9">1500</span><span style="color: #d0d0d0">);</span>
+        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">user.showIBAN()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+      </pre></div>
+    </div>
+    <button onclick="alertClose()">Inchide</button> 
+  </div>
+
+  <div class="alert-wrapper">
+    <div class="alert">
+      <div class = "alert-div" style="overflow:auto;width:800px;height:600px;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+        <span style="color: #cd2828; font-weight: bold">#include &lt;iostream&gt;</span>
+        <span style="color: #cd2828; font-weight: bold">#include &lt;cmath&gt;</span>
+        <span style="color: #cd2828; font-weight: bold">#include &lt;string&gt;</span>
+        <span style="color: #cd2828; font-weight: bold">#include &lt;stack&gt;</span>
+
+        <span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span>
+
+        <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Car</span> <span style="color: #d0d0d0">{</span>
+
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">An;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Marca;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Model;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Culoare;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Carburant;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">VIN;</span>
+            <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">Plate;</span>
+
+            <span style="color: #d0d0d0">public:</span>
+                <span style="color: #d0d0d0">Car(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">m,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">mo,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">c,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">f,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">v,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">p);</span>
+                <span style="color: #d0d0d0">Car();</span>
+                <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">getAge</span><span style="color: #d0d0d0">()</span>        <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">An;</span>        <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getName</span><span style="color: #d0d0d0">()</span>    <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">Marca;</span>     <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getModel</span><span style="color: #d0d0d0">()</span>   <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">Model;</span>     <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getColor</span><span style="color: #d0d0d0">()</span>   <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">Culoare;</span>   <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getFuel</span><span style="color: #d0d0d0">()</span>    <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">Carburant;</span> <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getVin</span><span style="color: #d0d0d0">()</span>     <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">VIN;</span>       <span style="color: #d0d0d0">}</span>
+                <span style="color: #d0d0d0">string</span> <span style="color: #447fcf">getPlate</span><span style="color: #d0d0d0">()</span>   <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">Plate;</span>     <span style="color: #d0d0d0">}</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">setCar</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">m,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">mo,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">c,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">f,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">v,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">p);</span>
+        <span style="color: #d0d0d0">};</span>
+
+        <span style="color: #d0d0d0">Car::Car(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">m,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">mo,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">c,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">f,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">v,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">p)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">An</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">x;</span>
+            <span style="color: #d0d0d0">Marca</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">m;</span>
+            <span style="color: #d0d0d0">Model</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">mo;</span>
+            <span style="color: #d0d0d0">Culoare</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">c;</span>
+            <span style="color: #d0d0d0">Carburant</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">f;</span>
+            <span style="color: #d0d0d0">VIN</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">v;</span>
+            <span style="color: #d0d0d0">Plate</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">p;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #d0d0d0">Car::Car()</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">An</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">Marca</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">Model</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">Culoare</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">Carburant</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">VIN</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">Plate</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Car::setCar(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">m,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">mo,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">c,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">f,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">v,</span> <span style="color: #d0d0d0">string</span> <span style="color: #d0d0d0">p)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">An</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">x;</span>
+            <span style="color: #d0d0d0">Marca</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">m;</span>
+            <span style="color: #d0d0d0">Model</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">mo;</span>
+            <span style="color: #d0d0d0">Culoare</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">c;</span>
+            <span style="color: #d0d0d0">Carburant</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">f;</span>
+            <span style="color: #d0d0d0">VIN</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">v;</span>
+            <span style="color: #d0d0d0">Plate</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">p;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Parcare</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">stack&lt;</span><span style="color: #6ab825; font-weight: bold">int</span><span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">liber;</span>
+            <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">ocupat[</span><span style="color: #3677a9">51</span><span style="color: #d0d0d0">];</span>
+            <span style="color: #d0d0d0">Car</span> <span style="color: #d0d0d0">masini[</span><span style="color: #3677a9">51</span><span style="color: #d0d0d0">];</span>
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">timp[</span><span style="color: #3677a9">51</span><span style="color: #d0d0d0">];</span>
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">costParcare</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span>
+
+            <span style="color: #d0d0d0">public:</span>
+                <span style="color: #d0d0d0">Parcare();</span>
+                <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">getSpace</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span> <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">liber.size();</span> <span style="color: #d0d0d0">}</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">addCar</span><span style="color: #d0d0d0">(Car</span> <span style="color: #d0d0d0">x);</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">removeCar</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place);</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">removeCar</span><span style="color: #d0d0d0">(string</span> <span style="color: #d0d0d0">plate);</span>
+                <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">getCost</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place);</span>
+                <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">getCost</span><span style="color: #d0d0d0">(string</span> <span style="color: #d0d0d0">plate);</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">carInfo</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place);</span>
+                <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">carInfo</span><span style="color: #d0d0d0">(string</span> <span style="color: #d0d0d0">plate);</span>
+
+        <span style="color: #d0d0d0">};</span>
+
+        <span style="color: #d0d0d0">Parcare::Parcare()</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">50</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&gt;</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">--i)</span>
+                <span style="color: #d0d0d0">liber.push(i);</span>
+            <span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;=</span> <span style="color: #3677a9">50</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">++i)</span>
+                <span style="color: #d0d0d0">timp[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">ocupat[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Parcare::addCar(Car</span> <span style="color: #d0d0d0">x)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">ocupate</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">liber.top();</span>
+            <span style="color: #d0d0d0">masini[ocupate].setCar(x.getAge(),</span> <span style="color: #d0d0d0">x.getName(),</span> <span style="color: #d0d0d0">x.getModel(),</span> <span style="color: #d0d0d0">x.getColor(),</span> <span style="color: #d0d0d0">x.getFuel(),</span> <span style="color: #d0d0d0">x.getVin(),</span> <span style="color: #d0d0d0">x.getPlate());</span>
+            <span style="color: #d0d0d0">timp[ocupate]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">ocupat[ocupate]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">liber.pop();</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina parcata cu succes!\n&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Parcare::removeCar(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(place</span> <span style="color: #d0d0d0">!=</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">&amp;&amp;</span> <span style="color: #d0d0d0">ocupat[place]</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+                <span style="color: #d0d0d0">liber.push(place);</span>
+                <span style="color: #d0d0d0">ocupat[place]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">masini[place].setCar(</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">);</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina scoasa cu succes!\n&quot;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #6ab825; font-weight: bold">return</span><span style="color: #d0d0d0">;</span>
+            <span style="color: #d0d0d0">}</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina specifica nu a putut fi gasita sau locul este liber.\n&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Parcare::removeCar(string</span> <span style="color: #d0d0d0">plate)</span> <span style="color: #d0d0d0">{</span>
+
+            <span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;=</span> <span style="color: #3677a9">50</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">++i)</span>
+                <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(masini[i].getPlate()</span> <span style="color: #d0d0d0">==</span> <span style="color: #d0d0d0">plate)</span> <span style="color: #d0d0d0">{</span>
+                    <span style="color: #d0d0d0">liber.push(i);</span>
+                    <span style="color: #d0d0d0">ocupat[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">timp[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">masini[i].setCar(</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;None&quot;</span><span style="color: #d0d0d0">);</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina scoasa cu succes!\n&quot;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #6ab825; font-weight: bold">return</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">}</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina specifica nu a putut fi gasita sau locul este liber.\n&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">Parcare::getCost(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(place</span> <span style="color: #d0d0d0">!=</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">&amp;&amp;</span> <span style="color: #d0d0d0">ocupat[place]</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+
+                <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">timp[place]</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">costParcare;</span>
+            <span style="color: #d0d0d0">}</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">Parcare::getCost(string</span> <span style="color: #d0d0d0">plate)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;=</span> <span style="color: #3677a9">50</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">++i)</span>
+                <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(masini[i].getPlate()</span> <span style="color: #d0d0d0">==</span> <span style="color: #d0d0d0">plate)</span>
+                    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">timp[i]</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">costParcare;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Parcare::carInfo(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">place)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(place</span> <span style="color: #d0d0d0">!=</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">&amp;&amp;</span> <span style="color: #d0d0d0">ocupat[place]</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Car info: \n&quot;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Brand &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getName()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Model &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getModel()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Fabricatie &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getAge()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Culoare &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getColor()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Carburant &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getFuel()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;VIN&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getVin()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Numar inmatriculare &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[place].getPlate()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Park info: \n&quot;</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Timp &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">timp[place]</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Cost &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">timp[place]</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">costParcare</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+
+                <span style="color: #6ab825; font-weight: bold">return</span><span style="color: #d0d0d0">;</span>
+
+            <span style="color: #d0d0d0">}</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina specifica nu a putut fi gasita sau locul este liber.\n&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Parcare::carInfo(string</span> <span style="color: #d0d0d0">plate)</span> <span style="color: #d0d0d0">{</span>
+            <span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;=</span> <span style="color: #3677a9">50</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">++i)</span>
+                <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(masini[i].getPlate()</span> <span style="color: #d0d0d0">==</span> <span style="color: #d0d0d0">plate)</span> <span style="color: #d0d0d0">{</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Car info: \n&quot;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Brand &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getName()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Model &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getModel()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Fabricatie &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getAge()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Culoare &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getColor()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Carburant &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getFuel()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;VIN &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getVin()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Numar inmatriculare &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">masini[i].getPlate()</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Park info: \n&quot;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Timp &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">timp[i]</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Cost &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">timp[i]</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">costParcare</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;\n&#39;</span><span style="color: #d0d0d0">;</span>
+                    <span style="color: #6ab825; font-weight: bold">return</span><span style="color: #d0d0d0">;</span>
+                <span style="color: #d0d0d0">}</span>
+            <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masina specifica nu a putut fi gasita sau locul este liber.\n&quot;</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+
+        <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">main()</span>
+        <span style="color: #d0d0d0">{</span>
+            <span style="color: #d0d0d0">Car</span> <span style="color: #d0d0d0">bmw(</span><span style="color: #3677a9">2014</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;BMW&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;X3&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Rosie&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Diesel&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;wbaxg5c5xddy32360&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;NT05SKL&quot;</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #d0d0d0">Parcare</span> <span style="color: #d0d0d0">lot;</span>
+            <span style="color: #d0d0d0">lot.addCar(bmw);</span>
+            <span style="color: #d0d0d0">lot.carInfo(</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #d0d0d0">Car</span> <span style="color: #447fcf">audi</span><span style="color: #d0d0d0">(</span><span style="color: #3677a9">2014</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Audi&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Q3&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Albastru&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;Diesel&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;VWASxg5c5xddy32360&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #ed9d13">&quot;NT68AUD&quot;</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #d0d0d0">lot.addCar(audi);</span>
+            <span style="color: #d0d0d0">lot.carInfo(</span><span style="color: #ed9d13">&quot;NT68AUD&quot;</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #d0d0d0">lot.removeCar(</span><span style="color: #ed9d13">&quot;NT05SKL&quot;</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #d0d0d0">lot.carInfo(</span><span style="color: #ed9d13">&quot;NT05SKL&quot;</span><span style="color: #d0d0d0">);</span>
+            <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+        <span style="color: #d0d0d0">}</span>
+      </pre></div>
+
+    </div>
+    <button onclick="alertClose()">Inchide</button> 
+  </div>
+
+  
+  <div class="alert-wrapper">
+    <div class="alert">
+      <div class = "alert-div" style="overflow:auto;width:800px;height:600px;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+      <span style="color: #cd2828; font-weight: bold">#include &lt;iostream&gt;</span>
+      <span style="color: #cd2828; font-weight: bold">#include &lt;cmath&gt;</span>
+
+      <span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span>
+
+      <span style="color: #6ab825; font-weight: bold">class</span> <span style="color: #447fcf; text-decoration: underline">Complex</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">private:</span>
+              <span style="color: #999999; font-style: italic">// i - partea imaginara, r - partea reala</span>
+              <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">r;</span>
+          <span style="color: #d0d0d0">public:</span>
+              <span style="color: #999999; font-style: italic">// constructor stabileste valoare partii reale si acelei imaginare</span>
+              <span style="color: #d0d0d0">Complex(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pr,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pi);</span>
+              <span style="color: #999999; font-style: italic">// constructor creeaza numarul complex nul</span>
+              <span style="color: #d0d0d0">Complex();</span>
+              <span style="color: #999999; font-style: italic">// seteaza valorile partii reale si a celei imaginare</span>
+              <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">set</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pr,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pi);</span>
+              <span style="color: #999999; font-style: italic">//returneaza modulul</span>
+              <span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #447fcf">modul</span><span style="color: #d0d0d0">();</span>
+              <span style="color: #999999; font-style: italic">//returneaza partea reala</span>
+              <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">real</span><span style="color: #d0d0d0">();</span>
+              <span style="color: #999999; font-style: italic">//returneaza partea imaginara</span>
+              <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">imag</span><span style="color: #d0d0d0">();</span>
+              <span style="color: #999999; font-style: italic">//supraincarcare operator pentru afisarea numarului complex</span>
+              <span style="color: #6ab825; font-weight: bold">friend</span> <span style="color: #d0d0d0">ostream&amp;</span> <span style="color: #6ab825; font-weight: bold">operator</span><span style="color: #d0d0d0">&lt;&lt;(ostream&amp;,</span> <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">Complex&amp;);</span>
+              <span style="color: #999999; font-style: italic">// supraincarcare operator adunare</span>
+              <span style="color: #d0d0d0">Complex</span> <span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">+(Complex</span> <span style="color: #d0d0d0">);</span>
+              <span style="color: #999999; font-style: italic">// supraincarcare operator scadere</span>
+              <span style="color: #d0d0d0">Complex</span> <span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">-(Complex</span> <span style="color: #d0d0d0">);</span>
+              <span style="color: #999999; font-style: italic">// supraincarcare operator inmultire</span>
+              <span style="color: #d0d0d0">Complex</span> <span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">*(Complex</span> <span style="color: #d0d0d0">);</span>
+      <span style="color: #d0d0d0">};</span>
+
+      <span style="color: #d0d0d0">Complex::Complex(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pr,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pi)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">r</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pr;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pi;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #d0d0d0">Complex::Complex()</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">r</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #d0d0d0">Complex::set(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pr,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">pi)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">r</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pr;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pi;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #d0d0d0">Complex::modul()</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">sqrt(i*i</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">r*r);</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">Complex::real()</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">r;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">Complex::imag()</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">i;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #d0d0d0">ostream&amp;</span> <span style="color: #6ab825; font-weight: bold">operator</span><span style="color: #d0d0d0">&lt;&lt;(ostream&amp;</span> <span style="color: #d0d0d0">f,</span> <span style="color: #6ab825; font-weight: bold">const</span> <span style="color: #d0d0d0">Complex&amp;</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(b.r</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span> <span style="color: #d0d0d0">&amp;&amp;</span> <span style="color: #d0d0d0">b.i</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+              <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">f</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(b.r</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+              <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">f</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.i</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;i&#39;</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(b.i</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+              <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">f</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.r;</span>
+          <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(b.i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+              <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">f</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.r</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.i</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;i&#39;</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">f</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.r</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;+&#39;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">b.i</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&#39;i&#39;</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #999999; font-style: italic">// supraincarcare operator adunare</span>
+      <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">Complex::</span><span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">+(Complex</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">temp</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">*</span><span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #d0d0d0">temp.r</span> <span style="color: #d0d0d0">+=</span> <span style="color: #d0d0d0">b.r;</span>
+          <span style="color: #d0d0d0">temp.i</span> <span style="color: #d0d0d0">+=</span> <span style="color: #d0d0d0">b.i;</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">temp;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #999999; font-style: italic">// supraincarcare operator scadere</span>
+      <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">Complex::</span><span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">-(Complex</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">temp</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">*</span><span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #d0d0d0">temp.r</span> <span style="color: #d0d0d0">-=</span> <span style="color: #d0d0d0">b.r;</span>
+          <span style="color: #d0d0d0">temp.i</span> <span style="color: #d0d0d0">-=</span> <span style="color: #d0d0d0">b.i;</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">temp;</span>
+      <span style="color: #d0d0d0">}</span>
+      <span style="color: #999999; font-style: italic">// supraincarcare operator inmultire</span>
+      <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">Complex::</span><span style="color: #6ab825; font-weight: bold">operator</span> <span style="color: #d0d0d0">*(Complex</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">temp</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">*</span><span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">;</span>
+          <span style="color: #d0d0d0">temp.r</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">-&gt;r</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">b.r</span> <span style="color: #d0d0d0">-</span> <span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">-&gt;i*b.i;</span>
+          <span style="color: #d0d0d0">temp.i</span> <span style="color: #d0d0d0">=</span> <span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">-&gt;r</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">b.i</span> <span style="color: #d0d0d0">+</span> <span style="color: #6ab825; font-weight: bold">this</span><span style="color: #d0d0d0">-&gt;i</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">b.r;</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">temp;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">main()</span>
+      <span style="color: #d0d0d0">{</span>
+          <span style="color: #d0d0d0">Complex</span> <span style="color: #d0d0d0">a,</span> <span style="color: #d0d0d0">b(</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">,</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">),c;</span> <span style="color: #999999; font-style: italic">// a si c nr complexe nule, b = 4 + 5i;</span>
+          <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">x,</span> <span style="color: #d0d0d0">y;</span>
+          <span style="color: #d0d0d0">cin</span> <span style="color: #d0d0d0">&gt;&gt;</span> <span style="color: #d0d0d0">x</span> <span style="color: #d0d0d0">&gt;&gt;</span> <span style="color: #d0d0d0">y;</span>
+          <span style="color: #d0d0d0">a.set(x,y);</span> <span style="color: #999999; font-style: italic">// numarul a devine x + yi;</span>
+          <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">a.modul()&lt;&lt;</span><span style="color: #ed9d13">&quot; &quot;</span><span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">a*b</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">a+b</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; &quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">a-b;</span>
+          <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+      <span style="color: #d0d0d0">}</span>
+
+      </pre></div>
+
+    </div>
+    <button onclick="alertClose()">Închide</button> 
+  </div>
+
+  <script src="js/prop.js"></script>
+  <script src="js/alert.js"></script>
+
+  <!----------------->
+
+  <!-- FOOTER -->
+  <div class = "footer">
+    <p id = "jsWrite">Copyright&copy; 2021 - Ifrim Cristian. All rights reserved.</p>
+  </div>
+
+  <script src="js/footer.js"></script>
+
+</body>
+
+
+</html>
